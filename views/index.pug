@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title books
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+  body
+     p(class='display-4 font-weight-light text-center') List of books
+     .mb-5
+     .container.text-center.list-group.table-responsive-sm
+         table.table.table-hover.table-default
+            thead
+             tr.bg-secondary
+               each value, key in books[0]
+                   th=key
+            tbody
+            each book in books
+                 tr(onClick=`move(${book.ISBN13})`)
+                    each value in book
+                        td=value
+script.
+   function move(isbn){
+        window.location.href=`/book/${isbn}`
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
