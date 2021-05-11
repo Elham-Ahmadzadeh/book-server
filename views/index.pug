@@ -3,6 +3,7 @@ html
   head
     title books
     link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   body
      p(class='display-4 font-weight-light text-center') List of books
      .mb-5
@@ -21,8 +22,10 @@ script.
    function move(isbn){
         window.location.href=`/book/${isbn}`
   }
-
-
+   //  function sortColumn(query){
+    //    window.location.href=`/sortColumn`
+  //}
+// onClick=`sortColumn(book.${book.req.query})`)
 
 
 

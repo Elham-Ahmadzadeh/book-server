@@ -27,10 +27,10 @@ html
          table.table.table-light.table-hover
             thead
              tr.bg-light
-               each value, key in booksInfo [0]
+               each value, key in stores [0]
                    th=key
             tbody
-              each book in booksInfo
+              each book in stores
                  tr(onClick=`move(${book.ISBN13})`)
                     each value in book
                         td=value
